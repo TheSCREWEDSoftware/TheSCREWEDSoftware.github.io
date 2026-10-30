@@ -3,9 +3,12 @@
 My GitHub Pages site: <https://thescrewedsoftware.github.io/>. A home page (`index.html`) that links to my
 projects, plus the web tools that need to be online, each in its own folder.
 
-| Folder | What | Online at |
+Projects with their own repository publish their own pages (Settings > Pages in that repository) and appear under
+this address without being copied here:
+
+| Project | Repository | Online at |
 | --- | --- | --- |
-| `world-randomizer/` | Character roller, world map and config update of mod-world-randomizer | `/world-randomizer/` |
+| World Randomizer pages | `mod-world-randomizer-website` | `/mod-world-randomizer-website/` |
 
 ## Putting it online (once)
 
@@ -24,16 +27,8 @@ projects, plus the web tools that need to be online, each in its own folder.
 
 ## Updating the World Randomizer pages
 
-From the module (`modules/mod-world-randomizer`):
-
-```sh
-tools/publish_web.sh "<path to this folder>"
-```
-
-It copies the module's `web/` here as `world-randomizer/`. Then commit and push this repository.
-
-The world map shows the zone outlines on a plain background here: the map pictures come from an aowow install,
-which GitHub Pages doesn't have.
+Nothing to do here: push `mod-world-randomizer-website` (the module's `web/` submodule) and GitHub Pages updates
+`/mod-world-randomizer-website/` by itself. The cards in `index.html` link there.
 
 ## Adding another project
 
