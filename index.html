@@ -80,6 +80,10 @@
   .tool b { display: block; font-size: 15px; }
   .tool span { display: block; font-size: 13px; color: var(--muted); }
   .card .more { margin-top: auto; padding-top: 6px; font-size: 14px; }
+  .needs { display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: var(--muted); }
+  .needs .tag { margin-right: 6px; }
+  .small-note { font-size: 13px !important; }
+  .tag.req { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
 
   footer { padding: 40px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line);
     margin-top: 40px; }
@@ -138,6 +142,16 @@
             <div><b>Config update</b><span>Bring an old module .conf to the newest layout</span></div>
           </a>
         </div>
+        <div class="needs">
+          <div><span class="tag req">Needs</span> AzerothCore (WotLK 3.3.5a) with
+            <a href="https://github.com/TheSCREWEDSoftware/mod-world-randomizer">mod-world-randomizer</a> on the
+            server, to play what the pages give you. The pages themselves run in any browser.</div>
+          <div><span class="tag">Works better with</span>
+            <a href="https://github.com/TheSCREWEDSoftware/mod-dynamic-scaling">mod-dynamic-scaling</a>: dungeons and
+            the open world scale to each player inside the randomizer's level brackets.</div>
+          <div><span class="tag">Optional</span> the RandomizerAchievements and DynamicScaling addons for the game
+            client. <a href="/mod-world-randomizer-website/about.html">What you need, in detail &rarr;</a></div>
+        </div>
         <p class="more">
           <a href="https://github.com/TheSCREWEDSoftware/mod-world-randomizer">Module on GitHub</a> &middot;
           <a href="https://github.com/TheSCREWEDSoftware/mod-world-randomizer-website">Website source</a> &middot;
@@ -156,6 +170,7 @@
         <h3>mod-world-randomizer</h3>
         <p>Shuffles the world into level brackets: zones, creatures, quests, dungeons and start zones, with player
           stat eras, hardcore, co-op starts and account-wide achievements with a companion addon.</p>
+        <p class="small-note">Needs AzerothCore. Works with mod-dynamic-scaling. Addon: RandomizerAchievements.</p>
         <a class="more" href="https://github.com/TheSCREWEDSoftware/mod-world-randomizer">View on GitHub &rarr;</a>
       </article>
       <article class="card">
@@ -164,6 +179,8 @@
         <h3>mod-dynamic-scaling</h3>
         <p>Scaling for instances and the open world, each with a Simple and an Advanced setting, cooldown resets and a
           companion addon where each player picks their leveling experience.</p>
+        <p class="small-note">Needs AzerothCore. Works on its own or with mod-world-randomizer. Addon:
+          DynamicScaling.</p>
         <a class="more" href="https://github.com/TheSCREWEDSoftware/mod-dynamic-scaling">View on GitHub &rarr;</a>
       </article>
       <article class="card">
