@@ -38,3 +38,8 @@ Nothing to do here: push `mod-world-randomizer-website` (the module's `web/` sub
 
 A project can also publish its own site from its own repository (Settings > Pages there): it then appears at
 `https://thescrewedsoftware.github.io/<repository name>/` without being copied here.
+
+## Made with
+
+Made with the help of [Claude](https://claude.ai), Anthropic's AI assistant: written and reviewed together with it,
+then tested and published by [Ryan Turner (TheSCREWEDSoftware)](https://github.com/TheSCREWEDSoftware).
