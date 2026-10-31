@@ -85,6 +85,10 @@
   .small-note { font-size: 13px !important; }
   .tag.req { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
 
+  .rel { display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: var(--muted); }
+  .rel .tag { margin-right: 6px; }
+  .card.archived { opacity: 0.75; }
+  .tag.arch { color: #d9822b; border-color: color-mix(in srgb, #d9822b 45%, var(--line)); }
   footer .made { margin-top: 6px; font-size: 13px; }
   footer { padding: 40px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line);
     margin-top: 40px; }
@@ -171,8 +175,13 @@
         <h3>GoW5DB - Gears 5 Database</h3>
         <p>Everything Gears 5 in one place: characters, weapons, classes, marks, maps, gamemodes, the Fabricator,
           enemies, bundles and more, with build tools. Still being finished and polished.</p>
-        <p class="more"><a href="/GoW5DB/">Open the site &rarr;</a> &middot;
-          <a href="https://github.com/TheSCREWEDSoftware/GoW5DB">GitHub</a></p>
+        <div class="rel">
+          <div><span class="tag">Part of</span><a href="https://github.com/GearsOfWarDatabases">Gears of War
+            Databases</a>, with its reference screenshots in
+            <a href="https://github.com/GearsOfWarDatabases/GoW5DB-Reference">GoW5DB-Reference</a></div>
+        </div>
+        <p class="more"><a href="https://gearsofwardatabases.github.io/GoW5DB/">Open the site &rarr;</a> &middot;
+          <a href="https://github.com/GearsOfWarDatabases/GoW5DB">GitHub</a></p>
       </article>
       <article class="card">
         <div class="tags"><span class="tag live">Live</span><span class="tag">C&amp;C Renegade</span>
@@ -187,27 +196,66 @@
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
+    <h2>AzerothCore modules</h2>
     <div class="grid">
       <article class="card">
-        <div class="tags"><span class="tag">C++</span><span class="tag">AzerothCore</span>
+        <div class="tags"><span class="tag">C++</span><span class="tag">Lua addon</span>
           <span class="tag">WotLK 3.3.5</span></div>
-        <h3>mod-world-randomizer</h3>
+        <h3 id="mod-world-randomizer">mod-world-randomizer</h3>
         <p>Shuffles the world into level brackets: zones, creatures, quests, dungeons and start zones, with player
-          stat eras, hardcore, co-op starts and account-wide achievements with a companion addon.</p>
-        <p class="small-note">Needs AzerothCore. Works with mod-dynamic-scaling. Addon: RandomizerAchievements.</p>
+          stat eras, hardcore, co-op starts, character rolls and account-wide achievements with rewards.</p>
+        <div class="rel">
+          <div><span class="tag">Works with</span><a href="#mod-dynamic-scaling">mod-dynamic-scaling</a></div>
+          <div><span class="tag live">Companion website</span>
+            <a href="/mod-world-randomizer-website/">mod-world-randomizer-website</a>, hosted online</div>
+          <div><span class="tag">Addon</span>RandomizerAchievements</div>
+        </div>
         <a class="more" href="https://github.com/TheSCREWEDSoftware/mod-world-randomizer">View on GitHub &rarr;</a>
       </article>
-      <article class="card">
-        <div class="tags"><span class="tag">C++</span><span class="tag">AzerothCore</span>
+      <article class="card" id="mod-dynamic-scaling">
+        <div class="tags"><span class="tag">C++</span><span class="tag">Lua addon</span>
           <span class="tag">WotLK 3.3.5</span></div>
         <h3>mod-dynamic-scaling</h3>
-        <p>Scaling for instances and the open world, each with a Simple and an Advanced setting, cooldown resets and a
-          companion addon where each player picks their leveling experience.</p>
-        <p class="small-note">Needs AzerothCore. Works on its own or with mod-world-randomizer. Addon:
-          DynamicScaling.</p>
+        <p>Scales dungeons and the open world to each player, who picks Simple, Advanced or no scaling. Small groups
+          can clear dungeons, and creatures stay inside a zone's level range.</p>
+        <div class="rel">
+          <div><span class="tag">Works with</span><a href="#mod-world-randomizer">mod-world-randomizer</a>
+            (or on its own)</div>
+          <div><span class="tag">Addon</span>DynamicScaling</div>
+        </div>
         <a class="more" href="https://github.com/TheSCREWEDSoftware/mod-dynamic-scaling">View on GitHub &rarr;</a>
       </article>
+      <article class="card" id="mod-world-randomizer-website">
+        <div class="tags"><span class="tag live">Live</span><span class="tag">JavaScript</span>
+          <span class="tag">Companion website</span></div>
+        <h3>mod-world-randomizer-website</h3>
+        <p>Not a module: the website that goes with mod-world-randomizer. Roll characters, view the shuffled world
+          map, browse the achievements and update config files. Static pages, no server needed.</p>
+        <div class="rel">
+          <div><span class="tag">Companion of</span>mod-world-randomizer</div>
+        </div>
+        <p class="more"><a href="/mod-world-randomizer-website/">Open the site &rarr;</a> &middot;
+          <a href="https://github.com/TheSCREWEDSoftware/mod-world-randomizer-website">GitHub</a></p>
+      </article>
+      <article class="card">
+        <div class="tags"><span class="tag">C++</span><span class="tag">AzerothCore</span></div>
+        <h3>mod-instance-quest-giver</h3>
+        <p>Adds an NPC with the quests of the instance it stands in (Vanilla instances for now).</p>
+        <a class="more" href="https://github.com/TheSCREWEDSoftware/mod-instance-quest-giver">View on GitHub
+          &rarr;</a>
+      </article>
+      <article class="card">
+        <div class="tags"><span class="tag">C++</span><span class="tag">AzerothCore</span></div>
+        <h3>mod-instanceCurrency</h3>
+        <p>Adds a currency to instances.</p>
+        <a class="more" href="https://github.com/TheSCREWEDSoftware/mod-instanceCurrency">View on GitHub &rarr;</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="wow">
+    <h2>World of Warcraft tools and addons</h2>
+    <div class="grid">
       <article class="card">
         <div class="tags"><span class="tag">Lua</span><span class="tag">SQL</span>
           <span class="tag">AzerothCore</span></div>
@@ -216,12 +264,26 @@
         <a class="more" href="https://github.com/TheSCREWEDSoftware/AzerothCore-Additions">View on GitHub &rarr;</a>
       </article>
       <article class="card">
-        <div class="tags"><span class="tag">Python</span><span class="tag">WoW sniffing</span></div>
-        <h3>Ymir launcher</h3>
-        <p>A launcher for the Ymir sniffing tool: fetches its releases and only offers the client versions that are
-          valid.</p>
-        <a class="more" href="https://github.com/TheSCREWEDSoftware/ymir-launcher-python">View on GitHub &rarr;</a>
+        <div class="tags"><span class="tag">Lua</span><span class="tag">Addon</span>
+          <span class="tag">WotLK 3.3.5</span></div>
+        <h3>WeaponSwingTimer 3.3.5</h3>
+        <p>The WeaponSwingTimer addon, back-ported from Classic Era to the 3.3.5a client.</p>
+        <a class="more" href="https://github.com/TheSCREWEDSoftware/WeaponSwingTimer-335-ac">View on GitHub
+          &rarr;</a>
       </article>
+      <article class="card">
+        <div class="tags"><span class="tag">HTML</span><span class="tag">WotLK 3.3.5</span></div>
+        <h3>3.3.5 Model Animations Info</h3>
+        <p>Animation information for 3.3.5 models.</p>
+        <a class="more" href="https://github.com/TheSCREWEDSoftware/3.3.5-Model-Animations-Info">View on GitHub
+          &rarr;</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="other">
+    <h2>Other games</h2>
+    <div class="grid">
       <article class="card">
         <div class="tags"><span class="tag">HTML</span><span class="tag">ArmA 3</span></div>
         <h3>ArmA 3 Preset Comparator</h3>
@@ -236,6 +298,28 @@
           ones.</p>
         <a class="more" href="https://github.com/TheSCREWEDSoftware/ArmA-3-Mod-Exporter">View on GitHub &rarr;</a>
       </article>
+      <article class="card">
+        <div class="tags"><span class="tag">Mod</span><span class="tag">Euro Truck Simulator 2</span></div>
+        <h3>ETS2 Jump Starter</h3>
+        <p>A jump starter mod for Euro Truck Simulator 2.</p>
+        <p class="more"><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1656493080">Steam
+          Workshop &rarr;</a> &middot;
+          <a href="https://github.com/TheSCREWEDSoftware/ets2-jump-starter">GitHub</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="archived">
+    <h2>Archived</h2>
+    <div class="grid">
+      <article class="card archived">
+        <div class="tags"><span class="tag arch">Archived</span><span class="tag">Python</span>
+          <span class="tag">WoW sniffing</span></div>
+        <h3>Ymir launcher</h3>
+        <p>A launcher for the Ymir sniffing tool: fetched its releases and only offered the client versions that were
+          valid. Archived on 30 October 2026, as Ymir is no longer developed.</p>
+        <a class="more" href="https://github.com/TheSCREWEDSoftware/ymir-launcher-python">View on GitHub &rarr;</a>
+      </article>
     </div>
   </section>
 </main>
@@ -243,7 +327,8 @@
 <footer>
   <div class="wrap">Ryan Turner &middot; <a href="https://github.com/TheSCREWEDSoftware">TheSCREWEDSoftware</a>
     &middot; Proud member of <a href="https://github.com/azerothcore">AzerothCore</a>
-    <div class="made">Made with the help of <a href="https://claude.ai">Claude</a>, Anthropic's AI assistant.</div></div>
+    <div class="made">Made with the help of <a href="https://claude.ai">Claude</a>, Anthropic's AI assistant.</div>
+  </div>
 </footer>
 
 </body>
