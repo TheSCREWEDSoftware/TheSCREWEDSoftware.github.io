@@ -69,6 +69,7 @@
     font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--panel-2); color: var(--muted);
     border: 1px solid var(--line);
   }
+  a.tag:hover { color: var(--text); text-decoration: none; border-color: var(--accent); }
   .tag.live { color: #3fbf6f; border-color: color-mix(in srgb, #3fbf6f 40%, var(--line)); }
   .tools { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
   .tool {
@@ -131,7 +132,7 @@
   <section id="apps">
     <h2>Desktop apps</h2>
     <div class="grid">
-      <article class="card app">
+      <article data-repo="TheSCREWEDSoftware/Urras" class="card app">
         <div class="app-head">
           <img src="img/urras.png" alt="Urras icon: three shards of ice">
           <div><h3>Urras</h3><div class="sub">A fast, native Git client</div></div>
@@ -145,7 +146,7 @@
           <a href="https://github.com/TheSCREWEDSoftware/Urras/releases/latest">Download</a> &middot;
           <a href="https://github.com/TheSCREWEDSoftware/Urras">GitHub</a></p>
       </article>
-      <article class="card app">
+      <article data-repo="TheSCREWEDSoftware/Anarres" class="card app">
         <div class="app-head">
           <img src="img/anarres.png" alt="Anarres icon: three purple lightning bolts">
           <div><h3>Anarres</h3><div class="sub">Spell and DBC editor for AzerothCore</div></div>
@@ -163,7 +164,7 @@
   <section id="tools">
     <h2>Web tools</h2>
     <div class="grid">
-      <article class="card feature">
+      <article data-repo="TheSCREWEDSoftware/mod-world-randomizer" class="card feature">
         <div class="tags"><span class="tag live">Live</span><span class="tag">AzerothCore</span>
           <span class="tag">WotLK 3.3.5</span></div>
         <h3>World Randomizer</h3>
@@ -205,7 +206,7 @@
   <section id="sites">
     <h2>Websites</h2>
     <div class="grid">
-      <article class="card">
+      <article data-repo="GearsOfWarDatabases/GearsOfWarDatabases.github.io" class="card">
         <div class="tags"><span class="tag live">Live</span><span class="tag">Gears of War</span>
           <span class="tag">Jekyll</span></div>
         <h3>Gears of War Databases</h3>
@@ -220,7 +221,7 @@
         <p class="more"><a href="https://gearsofwardatabases.github.io/">Open the site &rarr;</a> &middot;
           <a href="https://github.com/GearsOfWarDatabases">GitHub</a></p>
       </article>
-      <article class="card">
+      <article data-repo="cnc-exoduscommunity/cnc-exoduscommunity.github.io" class="card">
         <div class="tags"><span class="tag live">Live</span><span class="tag">C&amp;C Renegade</span>
           <span class="tag">Community</span></div>
         <h3>Exodus Community</h3>
@@ -235,7 +236,7 @@
   <section id="projects">
     <h2>AzerothCore modules</h2>
     <div class="grid">
-      <article class="card">
+      <article data-repo="TheSCREWEDSoftware/mod-world-randomizer" class="card">
         <div class="tags"><span class="tag">C++</span><span class="tag">Lua addon</span>
           <span class="tag">WotLK 3.3.5</span></div>
         <h3 id="mod-world-randomizer">mod-world-randomizer</h3>
@@ -249,7 +250,7 @@
         </div>
         <a class="more" href="https://github.com/TheSCREWEDSoftware/mod-world-randomizer">View on GitHub &rarr;</a>
       </article>
-      <article class="card" id="mod-dynamic-scaling">
+      <article data-repo="TheSCREWEDSoftware/mod-dynamic-scaling" class="card" id="mod-dynamic-scaling">
         <div class="tags"><span class="tag">C++</span><span class="tag">Lua addon</span>
           <span class="tag">WotLK 3.3.5</span></div>
         <h3>mod-dynamic-scaling</h3>
@@ -262,7 +263,7 @@
         </div>
         <a class="more" href="https://github.com/TheSCREWEDSoftware/mod-dynamic-scaling">View on GitHub &rarr;</a>
       </article>
-      <article class="card" id="mod-world-randomizer-website">
+      <article data-repo="TheSCREWEDSoftware/mod-world-randomizer-website" class="card" id="mod-world-randomizer-website">
         <div class="tags"><span class="tag live">Live</span><span class="tag">JavaScript</span>
           <span class="tag">Companion website</span></div>
         <h3>mod-world-randomizer-website</h3>
@@ -274,14 +275,14 @@
         <p class="more"><a href="/mod-world-randomizer-website/">Open the site &rarr;</a> &middot;
           <a href="https://github.com/TheSCREWEDSoftware/mod-world-randomizer-website">GitHub</a></p>
       </article>
-      <article class="card">
+      <article data-repo="TheSCREWEDSoftware/mod-instance-quest-giver" class="card">
         <div class="tags"><span class="tag">C++</span><span class="tag">AzerothCore</span></div>
         <h3>mod-instance-quest-giver</h3>
         <p>Adds an NPC with the quests of the instance it stands in (Vanilla instances for now).</p>
         <a class="more" href="https://github.com/TheSCREWEDSoftware/mod-instance-quest-giver">View on GitHub
           &rarr;</a>
       </article>
-      <article class="card">
+      <article data-repo="TheSCREWEDSoftware/mod-instanceCurrency" class="card">
         <div class="tags"><span class="tag">C++</span><span class="tag">AzerothCore</span></div>
         <h3>mod-instanceCurrency</h3>
         <p>Adds a currency to instances.</p>
@@ -293,14 +294,14 @@
   <section id="wow">
     <h2>World of Warcraft tools and addons</h2>
     <div class="grid">
-      <article class="card">
+      <article data-repo="TheSCREWEDSoftware/AzerothCore-Additions" class="card">
         <div class="tags"><span class="tag">Lua</span><span class="tag">SQL</span>
           <span class="tag">AzerothCore</span></div>
         <h3>AzerothCore Additions</h3>
         <p>SQL additions for players on AzerothCore servers.</p>
         <a class="more" href="https://github.com/TheSCREWEDSoftware/AzerothCore-Additions">View on GitHub &rarr;</a>
       </article>
-      <article class="card">
+      <article data-repo="TheSCREWEDSoftware/WeaponSwingTimer-335-ac" class="card">
         <div class="tags"><span class="tag">Lua</span><span class="tag">Addon</span>
           <span class="tag">WotLK 3.3.5</span></div>
         <h3>WeaponSwingTimer 3.3.5</h3>
@@ -308,7 +309,7 @@
         <a class="more" href="https://github.com/TheSCREWEDSoftware/WeaponSwingTimer-335-ac">View on GitHub
           &rarr;</a>
       </article>
-      <article class="card">
+      <article data-repo="TheSCREWEDSoftware/3.3.5-Model-Animations-Info" class="card">
         <div class="tags"><span class="tag">HTML</span><span class="tag">WotLK 3.3.5</span></div>
         <h3>3.3.5 Model Animations Info</h3>
         <p>Animation information for 3.3.5 models.</p>
@@ -321,21 +322,21 @@
   <section id="other">
     <h2>Other games</h2>
     <div class="grid">
-      <article class="card">
+      <article data-repo="TheSCREWEDSoftware/ArmA-3-Preset-Comparator" class="card">
         <div class="tags"><span class="tag">HTML</span><span class="tag">ArmA 3</span></div>
         <h3>ArmA 3 Preset Comparator</h3>
         <p>Compares two ArmA 3 mod presets and shows what differs between them.</p>
         <a class="more" href="https://github.com/TheSCREWEDSoftware/ArmA-3-Preset-Comparator">View on GitHub
           &rarr;</a>
       </article>
-      <article class="card">
+      <article data-repo="TheSCREWEDSoftware/ArmA-3-Mod-Exporter" class="card">
         <div class="tags"><span class="tag">Python</span><span class="tag">ArmA 3</span></div>
         <h3>ArmA 3 Mod Exporter</h3>
         <p>Exports ArmA 3 mods by name and by mod / workshop ID, for easier viewing and for servers such as Linux
           ones.</p>
         <a class="more" href="https://github.com/TheSCREWEDSoftware/ArmA-3-Mod-Exporter">View on GitHub &rarr;</a>
       </article>
-      <article class="card">
+      <article data-repo="TheSCREWEDSoftware/ets2-jump-starter" class="card">
         <div class="tags"><span class="tag">Mod</span><span class="tag">Euro Truck Simulator 2</span></div>
         <h3>ETS2 Jump Starter</h3>
         <p>A jump starter mod for Euro Truck Simulator 2.</p>
@@ -349,7 +350,7 @@
   <section id="archived">
     <h2>Archived</h2>
     <div class="grid">
-      <article class="card archived">
+      <article data-repo="TheSCREWEDSoftware/ymir-launcher-python" class="card archived">
         <div class="tags"><span class="tag arch">Archived</span><span class="tag">Python</span>
           <span class="tag">WoW sniffing</span></div>
         <h3>Ymir launcher</h3>
@@ -367,6 +368,70 @@
     <div class="made">Made with the help of <a href="https://claude.ai">Claude</a>, Anthropic's AI assistant.</div>
   </div>
 </footer>
+
+<script>
+// Each card's tags come from its repository's GitHub topics; the tags written above stay when a repository has none
+// or GitHub can't be reached. Status tags (Live, Needs, Archived) always stay.
+(function () {
+  const OWNER = "TheSCREWEDSoftware";
+  const MAX_TOPICS = 6;
+  const CACHE_KEY = "repo-topics";
+  const CACHE_MINUTES = 60;
+  const cards = Array.from(document.querySelectorAll("[data-repo]"));
+
+  function cached() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(CACHE_KEY) || "null");
+      return saved && Date.now() - saved.time < CACHE_MINUTES * 60000 ? saved.topics : null;
+    } catch (e) { return null; }
+  }
+
+  function remember(topics) {
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ time: Date.now(), topics: topics })); } catch (e) {}
+  }
+
+  async function json(url) {
+    const response = await fetch(url, { headers: { Accept: "application/vnd.github+json" } });
+    if (!response.ok) throw new Error(response.status);
+    return response.json();
+  }
+
+  // One request for all of my repositories, and one each for the few that belong to other accounts
+  async function load() {
+    const topics = {};
+    const mine = await json("https://api.github.com/users/" + OWNER + "/repos?per_page=100");
+    mine.forEach(function (repo) { topics[repo.full_name.toLowerCase()] = repo.topics || []; });
+    const others = cards.map(function (card) { return card.dataset.repo; })
+                        .filter(function (name) { return !name.toLowerCase().startsWith(OWNER.toLowerCase() + "/"); });
+    for (const name of new Set(others)) {
+      try { topics[name.toLowerCase()] = (await json("https://api.github.com/repos/" + name)).topics || []; }
+      catch (e) {}
+    }
+    return topics;
+  }
+
+  function show(topics) {
+    cards.forEach(function (card) {
+      const list = topics[card.dataset.repo.toLowerCase()];
+      const tags = card.querySelector(".tags");
+      if (!list || list.length === 0 || !tags) return;
+      const status = Array.from(tags.querySelectorAll(".tag.live, .tag.arch, .tag.req"));
+      const chips = list.slice(0, MAX_TOPICS).map(function (topic) {
+        const chip = document.createElement("a");
+        chip.className = "tag";
+        chip.textContent = topic;
+        chip.href = "https://github.com/topics/" + encodeURIComponent(topic);
+        return chip;
+      });
+      tags.replaceChildren.apply(tags, status.concat(chips));
+    });
+  }
+
+  const saved = cached();
+  if (saved) { show(saved); return; }
+  load().then(function (topics) { remember(topics); show(topics); }).catch(function () {});
+})();
+</script>
 
 </body>
 </html>
