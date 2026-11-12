@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ryan Turner · TheSCREWEDSoftware</title>
-<meta name="description" content="Tools and projects by Ryan Turner (TheSCREWEDSoftware): World of Warcraft emulation,
-  AzerothCore modules and other small utilities.">
+<meta name="description" content="Tools and projects by Ryan Turner (TheSCREWEDSoftware): Urras, a Git client, and
+  Anarres, a spell and DBC editor, plus World of Warcraft emulation, AzerothCore modules and other small utilities.">
 <style>
   :root {
     --bg: #0f1114;
@@ -89,6 +89,10 @@
   .rel .tag { margin-right: 6px; }
   .card.archived { opacity: 0.75; }
   .tag.arch { color: #d9822b; border-color: color-mix(in srgb, #d9822b 45%, var(--line)); }
+  .card.app { border-color: color-mix(in srgb, var(--accent-2) 45%, var(--line)); }
+  .app-head { display: flex; gap: 14px; align-items: center; }
+  .app-head img { width: 56px; height: 56px; flex: none; }
+  .app-head .sub { color: var(--muted); font-size: 14px; }
   footer .made { margin-top: 6px; font-size: 13px; }
   footer { padding: 40px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line);
     margin-top: 40px; }
@@ -106,8 +110,8 @@
         <div class="handle">TheSCREWEDSoftware</div>
       </div>
     </div>
-    <p class="lead">World of Warcraft emulation, AzerothCore modules and small tools that make servers and games a
-      little easier to run. The tools below run right here in your browser.</p>
+    <p class="lead">Two desktop apps, Urras and Anarres, plus World of Warcraft emulation, AzerothCore modules and small
+      tools that make servers and games a little easier to run. The web tools run right here in your browser.</p>
     <div class="links">
       <a class="btn" href="https://github.com/TheSCREWEDSoftware">
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53
@@ -124,6 +128,38 @@
 </header>
 
 <main class="wrap">
+  <section id="apps">
+    <h2>Desktop apps</h2>
+    <div class="grid">
+      <article class="card app">
+        <div class="app-head">
+          <img src="img/urras.png" alt="Urras icon: three shards of ice">
+          <div><h3>Urras</h3><div class="sub">A fast, native Git client</div></div>
+        </div>
+        <div class="tags"><span class="tag">C#</span><span class="tag">Avalonia</span>
+          <span class="tag">Windows</span><span class="tag">Linux</span></div>
+        <p>All your repositories grouped with their forks, line-by-line staging, a commit graph across every branch,
+          merge, rebase and conflict help, and accounts on GitHub, GitLab, Gitea and Bitbucket. Twelve ready-made
+          themes, shared with Anarres.</p>
+        <p class="more"><a href="/Urras/">Open the site &rarr;</a> &middot;
+          <a href="https://github.com/TheSCREWEDSoftware/Urras/releases/latest">Download</a> &middot;
+          <a href="https://github.com/TheSCREWEDSoftware/Urras">GitHub</a></p>
+      </article>
+      <article class="card app">
+        <div class="app-head">
+          <img src="img/anarres.png" alt="Anarres icon: three purple lightning bolts">
+          <div><h3>Anarres</h3><div class="sub">Spell and DBC editor for AzerothCore</div></div>
+        </div>
+        <div class="tags"><span class="tag">C#</span><span class="tag">AzerothCore</span>
+          <span class="tag">WotLK 3.3.5</span><span class="tag">Windows</span><span class="tag">Linux</span></div>
+        <p>Edit spells and any DBC table in one app, keep them in a database, and put the changes in place: the
+          server's dbc folder, a client patch MPQ and acore_world. Urras's twin, with the same look and themes.</p>
+        <p class="more"><a href="/Anarres/">Open the site &rarr;</a> &middot;
+          <a href="https://github.com/TheSCREWEDSoftware/Anarres">GitHub</a></p>
+      </article>
+    </div>
+  </section>
+
   <section id="tools">
     <h2>Web tools</h2>
     <div class="grid">
